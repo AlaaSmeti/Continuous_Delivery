@@ -12,7 +12,7 @@ pipeline {
         stage('NPM INSTALL') {
             steps{
             
-                sh 'npm install'
+                sh 'npm install --force'
             }
         }
         
