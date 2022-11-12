@@ -22,7 +22,7 @@ pipeline {
           //sh "npm -v "
           //sh "npm install --legacy-peer-deps"
             //sh 'cd my-app'
-            sh "ansible-playbook my-app/ansible/build.yml -i my-app/ansible/inventory/host.yml -e ansible_become_password=admin -vvv"
+            sh "ansible-playbook my-app/ansible/build.yml -i my-app/ansible/inventory/host.yml"
                }
             }
                     }
