@@ -11,7 +11,8 @@ pipeline {
         }
         stage('NPM INSTALL') {
             steps{
-                sh 'npm install '
+                sh 'cd my-app' ,
+                sh 'npm install --force'
             }
         }
         
