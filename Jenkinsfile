@@ -20,13 +20,18 @@ pipeline {
             steps {
 
           script{
-          //sh "npm -v "
-          //sh "npm install --legacy-peer-deps"
-            //sh 'cd my-app'
             sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                }
             }
                     }
+         stage('DOCKER') {
+            steps{
+            	script{
+                sh "ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml"
+                }
+            }
+        }           
+                    
                     
         }
         
