@@ -11,8 +11,8 @@ pipeline {
         }
         stage('NPM INSTALL') {
             steps{
-                sh 'cd my-app' 
-                sh 'npm install --force'
+            
+                sh 'npm install'
             }
         }
         
@@ -23,7 +23,7 @@ pipeline {
           //sh "npm -v "
           //sh "npm install --legacy-peer-deps"
             //sh 'cd my-app'
-            sh "ansible-playbook my-app/ansible/build.yml -i my-app/ansible/inventory/host.yml"
+            sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                }
             }
                     }
