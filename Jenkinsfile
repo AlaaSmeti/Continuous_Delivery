@@ -9,11 +9,11 @@ pipeline {
                 url: 'https://github.com/AlaaSmeti/Continuous_Delivery.git'
             }
         }
-        //stage('NPM INSTALL') {
-          //  steps{
-            //    sh 'npm install --force'
-            //}
-        //}
+        stage('NPM INSTALL') {
+            steps{
+                sh 'npm install '
+            }
+        }
         
         stage('build'){
             steps {
