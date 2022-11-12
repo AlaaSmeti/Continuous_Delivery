@@ -1,0 +1,12 @@
+---
+# tasks file for docker-registry
+- name: login dockerhub
+  docker_login:
+    username: "alaadoc"
+    password: "Azerty123*"
+- name: push to dockerhub
+  docker_image:
+    name: devops:latest
+    repository: alaadoc/devops
+    push: yes
+    source: local
