@@ -4,11 +4,12 @@
   docker_image:
     name: devops
     build: 
-      path: /var/lib/worksapce/'Pipeline git'
+      path: /var/lib/jenkins/workspace/Pipeline git
       pull: no
     source: build
     state: present
     force_source: true
+  
 - name: run docker container
   docker_container:
     name: myapp_container
