@@ -2,8 +2,8 @@
 localhost ansible_connection=local
 
 [Server]
-203.203.1.138
+localhost
 
 [Server:vars]
 ansible_python_interpreter= /usr/bin/python3
-ansi_user= alaa
+ansi_user= linux
