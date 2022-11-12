@@ -9,9 +9,9 @@ pipeline {
                 url: 'https://github.com/AlaaSmeti/Continuous_Delivery.git'
             }
         }
-        stage('NPM INIT') {
+        stage('NPM INSTALL') {
             steps{
-                sh 'npm init -y'
+                sh 'npm install --force'
             }
         }
         
