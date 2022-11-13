@@ -37,7 +37,14 @@ pipeline {
                 sh "ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml"
                 }
             }
-        }                     
+        }    
+        stage('STARTING MONITORING') {
+            steps{
+            	script{
+                sh "docker-compose up -d"
+                }
+            }
+        }                  
                     
         }
         
