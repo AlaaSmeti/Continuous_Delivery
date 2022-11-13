@@ -41,7 +41,7 @@ pipeline {
         stage('STARTING MONITORING') {
             steps{
             	script{
-                sh "docker-compose up -d"
+                sh "echo admin | sudo -S docker-compose up -d"
                 }
             }
         }                  
