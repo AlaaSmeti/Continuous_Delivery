@@ -20,7 +20,7 @@ pipeline {
             steps {
 
           script{
-            sh "echo admin | sudo ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
+            sh "echo admin | sudo -S ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                }
             }
                     }
