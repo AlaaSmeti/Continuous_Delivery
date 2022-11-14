@@ -20,7 +20,7 @@ pipeline {
             steps {
 
           script{
-            sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml -e ansible_become_password=admin"
+            sh "echo admin | sudo ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
                }
             }
                     }
